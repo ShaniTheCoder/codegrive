@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
 :root {
   --palette-dark: #111d29;
   --palette-primary: #6b8697;
@@ -18,7 +18,7 @@
 body {
   background-color:var(--palette-dark);
 }
- 
+/* Custom Font taken from codepen */
 @font-face {
   font-family: "Rocher";
   src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
@@ -51,132 +51,24 @@ body {
   font-palette: --Mint;
 }
 
-/* Navigation css */
-.nav {
+/* Common styles */
+.flex-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background-color: var(--palette-primary);
-  padding: 6px 10px;
-  width: 100%;
-  position: fixed;
-  z-index: 1;
-  font-size:15px;
 }
-.nav.scrolled{
-  background-color: white;
-}
-.link {
-  color: white;
-  font-weight: bolder;
-  text-decoration: none;
-  margin: 8px 8px;
-}
-.nav div {
-  margin-right: 0.8%;
-}
-.nav div a{
-  font-family: 'Rocher';
-}
-section{
-  height: 100vh;
-}
-/* section one styling */
-.section-1 {
-  background: url("assets/images/background.webp");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 100%;
-  text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
-}
-.section-1 h1 span {
-  font-family: Rocher;
-}
-.section-1 div h1 {
-  font-size: 8vw;
-}
-.section-3{
-  height: 700px;
-  padding-top:20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow: auto;
-}
-.section-3>h1{
-  font-family: 'Rocher';
-}
-.section-3 .art{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
-}
-.section-3 .art>div{
-  width: 80%;
-}
-/* #videos{
-  height: 80vh;
-  width: 80vh;
-} */
-#videos div{
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-}
-#videos iframe{
-margin: 15px 20px 20px 10px;
-}
-#videos img{
-  height: 20px;
-    width: 90px;
-    margin-left: 10px;
-}
-/* section four styling */
-#videos div a img{
-  height: 35px;
-
-}
-#videos div a{
-  margin: 10px;
-}
-.button a{
-  text-decoration: none;
-  font-family: 'Rocher';
-}
-.button{
-    padding: 5px 18px;
-    font-family: 'Rocher';
-    font-weight: 600;
-    background: var(--palette-secondary);
-    border: none;
-    border-radius: 10px;
-    font-size: 1rem;
-}
-
-
+/* Scroll bar styling */
 ::-webkit-scrollbar {
   width: 10px;
 }
-
 ::-webkit-scrollbar-track {
   background: var( --palette-primary); 
 }
-
-
 ::-webkit-scrollbar-thumb {
-  /* background: #6B8697; */
+  background: #6B8697;
   background: var(--palette-dark);
   border-radius: 10px;
 }
-
- 
+/* dialog box  */
 dialog {
   border: 1px solid #fff;
   border-radius: 5px;
@@ -193,15 +85,11 @@ dialog {
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
-
-
 }
 
 dialog h1 {
   margin-top: 0;
 }
-
-
 dialog button {
   background-color: var(--palette-accent);
   color: #fff;
@@ -223,21 +111,118 @@ dialog div a img{
 dialog div a{
   margin: 10px;
 }
+/* video section styling in video dialog */
+#videos div{
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+#videos iframe{
+margin: 15px 20px 20px 10px;
+}
+#videos img{
+  height: 20px;
+  width: 90px;
+  margin-left: 10px;
+}
+#videos div a img{
+height: 35px;
+
+}
+#videos div a{
+margin: 10px;
+}
+/* Navigation css */
+.nav {
+  width: 100%;
+  font-size:15px;
+  position: fixed;
+  padding: 6px 10px;
+  justify-content: space-between;
+  background-color: var(--palette-primary);
+}
+
+.link {
+  color: white;
+  font-weight: bolder;
+  text-decoration: none;
+  margin: 8px 8px;
+}
+.nav div {
+  margin-right: 0.8%;
+}
+.nav div a{
+  font-family: 'Rocher';
+}
+/* button style */
+.button a{
+  text-decoration: none;
+  font-family: 'Rocher';
+}
+.button{
+    padding: 5px 18px;
+    font-family: 'Rocher';
+    font-weight: 600;
+    background: var(--palette-secondary);
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+/* section one styling */
+.section-1 {
+  background: url("assets/images/background.webp");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+  text-align: center;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  height: 100vh;
+  
+}
+.section-1 div h1 span {
+  font-family: Rocher;
+}
+.section-1 div h1 {
+  font-size: 8vw;
+}
+/* Section 2 styling (articles section) */
+.section-2{
+  height: fit-content;
+  padding: 20px 10px;
+  flex-direction: column;
+  overflow: auto;
+  gap:20px;
+}
+.section-2>h1{
+  font-family: 'Rocher';
+}
+.section-2 .art{
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.section-2 .art>div{
+  width: 80%;
+}
+
+/* Media Query */
 @media only screen and (max-width: 700px) {
 
-  .section-3{
+  .section-2{
     text-align: center;
   }  
-  .section-3>div{
+  .section-2>div{
     margin:10px;
   }
-  .section-3>div>div>h1{
+  .section-2>div>div>h1{
     font-size: 1.5em;
   }
-  .section-3>div>div>p{
+  .section-2>div>div>p{
     font-size: 0.8em;
   }
-  .section-3 .art{
+  .section-2 .art{
       flex-direction: column;
     }
 }
@@ -249,28 +234,15 @@ dialog div a{
    margin:auto;
   }
 }
-@-webkit-keyframes Gradient {
-    0%{background-position:0% 26%}
-    50%{background-position:100% 75%}
-    100%{background-position:0% 26%}
-}
-@-moz-keyframes Gradient {
-    0%{background-position:0% 26%}
-    50%{background-position:100% 75%}
-    100%{background-position:0% 26%}
-}
-@keyframes Gradient {
-    0%{background-position:0% 26%}
-    50%{background-position:100% 75%}
-    100%{background-position:0% 26%}
-}
+
 @media only screen and (max-width: 1060px){
   #videos{
     height: 80vh;
-    width: 80vh;
+    width: fit-content;
+    margin:20px;
   }
   .section-1 div h1{
-    font-size: 2.4em;
+    font-size: 2.5em;
   }
   .nav div{
     margin-right: 5%;
@@ -278,11 +250,7 @@ dialog div a{
   
   .section-1{
     height: 80vh;
-   /* background: linear-gradient(241deg, rgba(48,35,174,1) 0%, rgba(255,0,153,1) 100%);; */
    background: linear-gradient(140deg, rgba(48,35,174,1) 0%, rgba(255,0,153,1) 100%);;
-    -webkit-animation: Gradient 19s ease infinite;
-    -moz-animation: Gradient 19s ease infinite;
-    animation: Gradient 19s ease infinite;
   }
  
 }

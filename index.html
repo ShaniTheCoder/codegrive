@@ -14,10 +14,10 @@
 
 <body>
 
-    <nav class="nav">
+    <nav class="nav flex-container">
         <img src="assets/images/logo.webp" alt="Logo" width="50px">
       
-          <div  >
+          <div>
             <a href="#home" class="link purples">Home</a>
             <a href="#article" class="link purples">articles</a>
             <a href="#" class="link purples" onclick="document.getElementById('videos').showModal();document.getElementById('videos').style.display = 'block'">videos</a>
@@ -45,7 +45,8 @@
         <h1 id="video" style="font-family:'Rocher';" class="grays">Videos</h1>
         <p>view more video on <a href="https://youtube.com/@codegrive/videos"><img src="assets/svg/youtube.svg"
                     alt="youtube"></a></p>
-        <div><iframe width="560" height="315" src="https://www.youtube.com/embed/gOQMH7OCO_Y?si=n5828nwmtYqvNgAT"
+        <div class="flex-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/gOQMH7OCO_Y?si=n5828nwmtYqvNgAT"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -58,8 +59,7 @@
         <button class="button">View more YouTube</button> 
         <button onclick="document.getElementById('videos').style.display = 'none';document.getElementById('videos').close();" class="button">Close</button>
     </dialog>
-    <section class="section-1" id="home">
-  
+    <section class="section-1 flex-container" id="home">
         <div>
             <h1><span class="mint">Wel</span><span>come</span></h1>
             <h1><span>T</span><span class="mint">o</span></h1>
@@ -67,16 +67,16 @@
         </div>
     </section>
    
-    <section class="section-3">
+    <section class="section-2 flex-container">
         <h1 id="article"  style="font-family:'Rocher';" class="grays">Articles</h1>
-        <div class="art">
+        <div class="art flex-container">
             <div>
                 <h1>Difference Between C and C++</h1>
                 <p>In this article, I discuss the differences between C and C++. Both are great programming languages, each with its unique strengths and use cases. Below, I share a brief overview of the key differences between them.</p>
             </div>
             <button class="button"><a href="docs/Diff_C_Cpp.html">ReadMore</a></button>
         </div>
-        <div class="art">
+        <div class="art flex-container">
             <div>
                 <h1>How to setup WSL/WSL2</h1>
                 <p>In this article, I Explain how to install wsl in simplest methods possible, Using developer you can use linux distribution like ubuntu in windows without dual booting</p>
@@ -84,10 +84,7 @@
             </div>
             <button class="button"><a href="docs/wsl_setup.html">ReadMore</a></button>
         </div>
-        
-      
-
     </section> 
+    
 </body>
-
 </html>
