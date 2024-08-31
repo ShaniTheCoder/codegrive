@@ -20,6 +20,7 @@ Codegrive is a platform featuring articles and videos about various programming 
 ### Articles
 
 - [Difference Between C and C++](https://shanithecoder.github.io/codegrive/docs/Diff_C_Cpp.html)
+- [How to setup WSL2](https://shanithecoder.github.io/codegrive/docs/wsl_setup.html)
 
 ### Videos
 
@@ -35,7 +36,7 @@ Codegrive is licensed under the CC0 1.0 Universal (CC0 1.0). See the [LICENSE](L
 
 For questions, suggestions, or feedback:
 
-- **Email**: shanithecoder@gmail.com
+- **Email**: codegrive@outlook.com
 - **X(formerly twitter)** : [codegrive](https://x.com/codegrive) 
 - **GitHub Issues**: [Submit an issue](https://github.com/shanithecoder/codegrive/issues)
 
