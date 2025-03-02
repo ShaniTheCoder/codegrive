@@ -1,0 +1,13 @@
+[
+    {
+      "id": "1",
+      "title": "Understanding React Hooks",
+      "summary": "React Hooks allow you to use state and other React features without writing a class."
+    },
+    {
+      "id": "2",
+      "title": "JavaScript Async/Await",
+      "summary": "Master asynchronous JavaScript with async/await for better readability."
+    }
+  ]
+  

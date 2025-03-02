@@ -4,8 +4,8 @@ import { Home } from "./pages/Home";
 import { Articles } from "./pages/Articles";
 import { Links } from "./pages/Links";
 import { About } from "./pages/About";
+import { ArticleDetails } from "./pages/ArticleDetails";
 import "./styles/global.css";
-
 
 const App: React.FC = () => {
   return (
@@ -14,18 +14,21 @@ const App: React.FC = () => {
         <nav className="navbar">
           <div className="logo">CodeGrive</div>
           <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/articles">Articles</Link></li>
-            <li><Link to="/links">Links</Link></li>
-            <li><Link to="/about">About</Link></li>
+            <li><Link to="/codegrive">Home</Link></li>
+            <li><Link to="/codegrive/articles">Articles</Link></li>
+            <li><Link to="/codegrive/links">Links</Link></li>
+            <li><Link to="/codegrive/about">About</Link></li>
           </ul>
         </nav>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/articles" element={<Articles />} />
-          <Route path="/links" element={<Links />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
+        <div className="content">
+          <Routes>
+            <Route path="/codegrive" element={<Home />} />
+            <Route path="/codegrive/articles" element={<Articles />} />
+            <Route path="/codegrive/articles/:id" element={<ArticleDetails />} />
+            <Route path="/codegrive/links" element={<Links />} />
+            <Route path="/codegrive/about" element={<About />} />
+          </Routes>
+        </div>
         <footer className="footer">&copy; 2025 CodeGrive. All rights reserved.</footer>
       </div>
     </Router>
